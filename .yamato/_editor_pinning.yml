@@ -56,10 +56,6 @@ editor-pinning-update:
       -  pipenv run python3 .yamato/ruamel/editor_pinning/update_revisions.py --target-branch yamato/green-project-revisions-ep-ci --force-push
     dependencies:
       -  .yamato/_editor_pinning.yml#editor-pinning-target-to-ci
-    triggers:
-        recurring:
-          -  branch: yamato/green-project-revisions-ep
-             frequency: 0 * * ?
 editor-pinning-merge-revisions-trunk:
     name: Merge [trunk] revisions to yamato/green-project-revisions-ep [no ABV]
     agent:
