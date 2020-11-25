@@ -39,7 +39,7 @@ namespace UnityEngine.Experimental.Rendering.Universal
 
         private readonly Renderer2DData m_Renderer2DData;
 
-        private bool m_HasValidDepth;
+        private bool m_UseDepth;
 
         public Render2DLightingPass(Renderer2DData rendererData, Material blitMaterial, Material samplingMaterial)
         {
@@ -48,9 +48,9 @@ namespace UnityEngine.Experimental.Rendering.Universal
             m_SamplingMaterial = samplingMaterial;
         }
 
-        internal void Setup(bool hasValidDepth)
+        internal void Setup(bool useDepth)
         {
-            m_HasValidDepth = hasValidDepth;
+            m_UseDepth = useDepth;
         }
 
         private void GetTransparencySortingMode(Camera camera, ref SortingSettings sortingSettings)
@@ -143,7 +143,7 @@ namespace UnityEngine.Experimental.Rendering.Universal
                     if (layerBatch.lightStats.totalNormalMapUsage > 0)
                     {
                         filterSettings.sortingLayerRange = layerBatch.layerRange;
-                        var depthTarget = m_HasValidDepth ? depthAttachment : BuiltinRenderTextureType.None;
+                        var depthTarget = m_UseDepth ? depthAttachment : BuiltinRenderTextureType.None;
                         this.RenderNormals(context, renderingData, normalsDrawSettings, filterSettings, depthTarget, cmd, layerBatch.lightStats);
                     }
 
@@ -158,7 +158,10 @@ namespace UnityEngine.Experimental.Rendering.Universal
             var blendStylesCount = m_Renderer2DData.lightBlendStyles.Length;
             using (new ProfilingScope(cmd, m_ProfilingDrawRenderers))
             {
-                CoreUtils.SetRenderTarget(cmd, colorAttachment, depthAttachment, ClearFlag.None, Color.white);
+                var depthStore = m_UseDepth ? RenderBufferStoreAction.Store : RenderBufferStoreAction.DontCare;
+                CoreUtils.SetRenderTarget(cmd, colorAttachment, RenderBufferLoadAction.Load, RenderBufferStoreAction.Store,
+                    depthAttachment, RenderBufferLoadAction.Load, depthStore, //ClearFlag.None, Color.white);
+                    ClearFlag.All, renderingData.cameraData.camera.backgroundColor);
 
                 for (var i = startIndex; i < startIndex + batchesDrawn; i++)
                 {
