@@ -1,5 +1,5 @@
 universal:
-  updated_at: '2020-11-20 12:42:23.600250'
+  updated_at: '2020-11-27 08:54:32.739941'
   last_green_revisions:
     android:
       revision: 9f263750764c7ac62f1f4d698e685133f3c04bde
@@ -40,7 +40,7 @@ hdrp:
       revision: 37c5ec4c3cb13853f9074c74cbac49a232178bd8
       version: ''
 shadergraph:
-  updated_at: '2020-11-20 12:42:23.600250'
+  updated_at: '2020-11-27 08:54:32.739941'
   last_green_revisions:
     android:
       revision: 9f263750764c7ac62f1f4d698e685133f3c04bde
