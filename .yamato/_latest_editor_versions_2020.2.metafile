@@ -9,49 +9,49 @@ editor_version_names:
 editor_versions:
   2020_2_latest_internal:
     android:
-      revision: 92852ae685d8
-      version: 2020.2.0b12
+      revision: dc0b50340a64
+      version: 2020.2.0b14
     ios:
-      revision: 92852ae685d8
-      version: 2020.2.0b12
+      revision: dc0b50340a64
+      version: 2020.2.0b14
     linux:
-      revision: 92852ae685d8
-      version: 2020.2.0b12
+      revision: dc0b50340a64
+      version: 2020.2.0b14
     macos:
-      revision: 92852ae685d8
-      version: 2020.2.0b12
+      revision: dc0b50340a64
+      version: 2020.2.0b14
     windows:
-      revision: 92852ae685d8
-      version: 2020.2.0b12
+      revision: dc0b50340a64
+      version: 2020.2.0b14
   2020_2_latest_public:
     android:
-      revision: c499c2bf2e80
-      version: 2020.2.0b11
+      revision: 655e1a328b90
+      version: 2020.2.0b13
     ios:
-      revision: c499c2bf2e80
-      version: 2020.2.0b11
+      revision: 655e1a328b90
+      version: 2020.2.0b13
     linux:
-      revision: c499c2bf2e80
-      version: 2020.2.0b11
+      revision: 655e1a328b90
+      version: 2020.2.0b13
     macos:
-      revision: c499c2bf2e80
-      version: 2020.2.0b11
+      revision: 655e1a328b90
+      version: 2020.2.0b13
     windows:
-      revision: c499c2bf2e80
-      version: 2020.2.0b11
+      revision: 655e1a328b90
+      version: 2020.2.0b13
   2020_2_staging:
     android:
-      revision: 92852ae685d86ada439969305ade7595f9c31ef9
+      revision: 0f7de870b826616b473da0654692b2dcfaf818dc
       version: ''
     ios:
-      revision: 92852ae685d86ada439969305ade7595f9c31ef9
+      revision: 0f7de870b826616b473da0654692b2dcfaf818dc
       version: ''
     linux:
-      revision: 92852ae685d86ada439969305ade7595f9c31ef9
+      revision: 0f7de870b826616b473da0654692b2dcfaf818dc
       version: ''
     macos:
-      revision: 92852ae685d86ada439969305ade7595f9c31ef9
+      revision: 0f7de870b826616b473da0654692b2dcfaf818dc
       version: ''
     windows:
-      revision: 92852ae685d86ada439969305ade7595f9c31ef9
+      revision: 0f7de870b826616b473da0654692b2dcfaf818dc
       version: ''
